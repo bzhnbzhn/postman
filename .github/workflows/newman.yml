@@ -33,4 +33,4 @@ jobs:
       # Run the POSTMAN collection
       - name: Run POSTMAN collection
         run: |
-          newman run Collection.json
+          newman run Collection2.json
