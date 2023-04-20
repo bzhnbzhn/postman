@@ -33,7 +33,7 @@ jobs:
       # Run the POSTMAN collection
       - name: Run POSTMAN collection
         run: |
-          newman run ETOS_APP_OCAPI.postman_collection.json --folder "TESTS" -e DEV.postman_environment.json
+          newman run Postman - Contact List Collection.json -e Postman - My First Environment.json
 
 
       # Upload the contents of Test Results directory to workspace
