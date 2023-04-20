@@ -33,7 +33,7 @@ jobs:
       # Run the POSTMAN collection
       - name: Run POSTMAN collection
         run: |
-          newman run Collection.json -e Environment.json
+          newman run Collection.json
 
 
       # Upload the contents of Test Results directory to workspace
