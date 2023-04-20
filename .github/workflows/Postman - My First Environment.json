@@ -1,0 +1,33 @@
+{
+	"id": "5a2dfc2c-505f-4866-8483-a4927e7da515",
+	"name": "My First Environment",
+	"values": [
+		{
+			"key": "firstName",
+			"value": "Yelyzaveta",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "lastName",
+			"value": "Frolova",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "email",
+			"value": "lzard3869@gmail.com",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "contactid",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2023-01-13T15:41:07.157Z",
+	"_postman_exported_using": "Postman/10.8.0-230109-1136"
+}
