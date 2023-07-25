@@ -33,4 +33,4 @@ jobs:
       # Run the POSTMAN collection
       - name: Run POSTMAN collection
         run: |
-          newman run ./workflows/Collection2.json
+          newman run .github/workflows/Collection2.json
