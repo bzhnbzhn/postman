@@ -14,5 +14,4 @@ jobs:
         with:
           collection:  .github/workflows/ETOS_APP_OCAPI.postman_collection.json
           environment: .github/workflows/DEV.postman_environment.json
-          reporters: '["emojitrain"]'
           envVar: '[{ "key": "CLIENT_SECRET", "value": "${{ secrets.SFCC_ETOSDEV_CLIENT_SECRET }}" }]'
