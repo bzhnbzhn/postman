@@ -6,16 +6,6 @@ on:
     - main
 
 jobs:
-
-  bash-example:
-    runs-on: ubuntu-latest
-    steps:
-        - name: Group of log lines
-          run: |
-              echo "::group::My title"
-              echo "Inside group"
-              echo "::endgroup::"
-              echo "github.event.head_commit.message"
             
   newman:
     runs-on: ubuntu-latest
