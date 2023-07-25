@@ -27,4 +27,4 @@ jobs:
       # Run the POSTMAN collection
       - name: Run POSTMAN collection
         run: |
-          newman run .github/workflows/ETOS_APP_OCAPI.postman_collection.json -e .github/workflows/DEV.postman_environment.json -e ./ocapi_postman_collection/DEV.postman_environment.json --env-var "CLIENT_SECRET=${{ secrets.SFCC_ETOSDEV_CLIENT_SECRET }}" 
+          newman run .github/workflows/ETOS_APP_OCAPI.postman_collection.json -e .github/workflows/DEV.postman_environment.json --env-var "CLIENT_SECRET=${{ secrets.SFCC_ETOSDEV_CLIENT_SECRET }}" 
