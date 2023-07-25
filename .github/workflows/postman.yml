@@ -12,5 +12,5 @@ jobs:
       - uses: actions/checkout@master
       - uses: matt-ball/newman-action@master
         with:
-          collection: .github/workflows/ETOS_APP_OCAPI.postman_collection.json
+          collection:  .github/workflows/ETOS_APP_OCAPI Copy.postman_collection.json
           environment: .github/workflows/DEV.postman_environment.json
