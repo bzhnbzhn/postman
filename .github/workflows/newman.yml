@@ -24,13 +24,7 @@ jobs:
           npm install -g newman
           npm install -g newman-reporter-htmlextra
 
-
-      # Make directory to upload the test results
-      - name: Make Directory for results
-        run: mkdir -p testResults
-
-
       # Run the POSTMAN collection
       - name: Run POSTMAN collection
         run: |
-          newman run .github/workflows/Collection2.json
+          newman run .github/workflows/ETOS_APP_OCAPI.postman_collection.json -e .github/workflows/DEV.postman_environment.json 
