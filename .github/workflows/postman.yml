@@ -5,10 +5,8 @@ on:
     branches:
     - main
 
-
 jobs:
 
-    
   bash-example:
     runs-on: ubuntu-latest
     steps:
