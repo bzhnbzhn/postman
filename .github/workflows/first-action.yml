@@ -8,16 +8,6 @@ jobs:
     steps: 
       - name: Print greeting
         run: echo "Hello World"
-  check_skip_flags:
-    name: Check skip flags
-    runs-on: ubuntu-latest
-    outputs:
-      head-commit-message: ${{ steps.get_head_commit_message.outputs.headCommitMsg }}
-    steps:
-      - name: Get repo
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-      - name: Print head git commit message
-        id: get_head_commit_message
-        run: echo "::set-output name=headCommitMsg::$(git show -s --format=%s)"
+        if: "!contains(github.event.head_commit.message, 'build')"
+      - name: Print greeting
+        run: echo "Hello World"
