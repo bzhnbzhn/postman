@@ -8,11 +8,16 @@ jobs:
     steps: 
       - name: Print greeting
         run: echo "Hello World"
-      - name: Checkout Commit
+  check_skip_flags:
+    name: Check skip flags
+    runs-on: ubuntu-latest
+    outputs:
+      head-commit-message: ${{ steps.get_head_commit_message.outputs.headCommitMsg }}
+    steps:
+      - name: Get repo
         uses: actions/checkout@v3
         with:
-          ref: ${{ env.GITHUB_SHA }}
-      - name: Get Head Commit Message
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Print head git commit message
         id: get_head_commit_message
-        run: echo "HEAD_COMMIT_MESSAGE=$(git show -s --format=%s)" >> "$GITHUB_OUTPUT"
-
+        run: echo "::set-output name=headCommitMsg::$(git show -s --format=%s)"
