@@ -19,5 +19,5 @@ jobs:
         run: echo "Hello World"
         
       - name: Print greeting
+        if: "${{ contains(toJSON(github.event.pull_request.title, 'OCAPI')) }}"
         run: echo "Hello World"
-        
