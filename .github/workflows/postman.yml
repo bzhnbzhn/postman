@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     if: "${{ contains(toJSON(github.event.pull_request.title), 'OCAPI') }}"
     steps:
+      - name: Print commit message
+        run: |
+          echo "${{toJSON(github.event.pull_request.title)}}"
       - uses: actions/checkout@master
       - uses: matt-ball/newman-action@master
         with:
