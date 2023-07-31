@@ -14,6 +14,6 @@ jobs:
       - uses: matt-ball/newman-action@master
         with:
           collection:  .github/workflows/ETOS_APP_OCAPI.postman_collection.json
-          album: TESTS
+          folder: TESTS
           environment: .github/workflows/DEV.postman_environment.json
           envVar: '[{ "key": "CLIENT_SECRET", "value": "${{ secrets.SFCC_ETOSDEV_CLIENT_SECRET }}" }]'
