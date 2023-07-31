@@ -6,7 +6,6 @@ jobs:
             
   newman:
     runs-on: ubuntu-latest
-    if: "${{ contains(toJSON(github.event.pull_request.title), 'OCAPI') }}"
     steps:
       - name: Print commit message
         run: |
