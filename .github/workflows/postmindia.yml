@@ -31,7 +31,7 @@ jobs:
       # Run the POSTMAN collection
       - name: Run POSTMAN collection
         run: |
-          newman run .github/workflows/ETOS_APP_OCAPI.postman_collection.json --f "TESTS" -e .github/workflows/DEV.postman_environment.json -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html --reporter-htmlextra-darkTheme  > testResults/runreport1.html
+          newman run .github/workflows/ETOS_APP_OCAPI.postman_collection.json --folder "TESTS" -e .github/workflows/DEV.postman_environment.json -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html --reporter-htmlextra-darkTheme  > testResults/runreport1.html
 
 
       # Upload the contents of Test Results directory to workspace
