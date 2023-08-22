@@ -3,18 +3,13 @@ name: Newman Run
 on: workflow_dispatch
 
 jobs:
-            
+
   newman:
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
-      - name: Print commit message
-        run: |
-          echo "${{toJSON(github.event.pull_request.title)}}"
       - uses: actions/checkout@master
       - uses: matt-ball/newman-action@master
         with:
-          collection:  .github/workflows/ETOS_APP_OCAPI.postman_collection.json
-          folder: "TESTS"
-          environment: .github/workflows/DEV.postman_environment.json
-          envVar: '[{ "key": "CLIENT_SECRET", "value": "${{ secrets.SFCC_ETOSDEV_CLIENT_SECRET }}"}, { "key": "CLIENT_SECRET", "value": "${{ secrets.SFCC_ETOSDEV_CLIENT_SECRET }}" }]'
+          collection: ocapi_postman_collection/ETOS_APP_OCAPI.postman_collection.json
+          environment: ocapi_postman_collection/DEV.postman_environment.json
+          envVar: '[{ "key": "CLIENT_SECRET", "value": "${{ secrets.SFCC_ETOSDEV_CLIENT_SECRET }}" }, { "key": "ADYEN_X_API_KEY", "value": "${{ secrets.ADYEN_X_API_KEY }}" }]'
